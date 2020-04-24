@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'json', '~> 2.1.0'
 gem 'rake'
 gem 'pry'
