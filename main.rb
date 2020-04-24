@@ -17,7 +17,7 @@ botkey = ENV['DISCORD_API_KEY']
 
 Logger.new(ENV['Starting Discord bot'])
 
-bot = Discordrb::Commands::CommandBot.new token: , prefix: prefix
+bot = Discordrb::Commands::CommandBot.new token: botkey, prefix: prefix
 bot.run true
 # Steam api config 
 SteamWebApi.configure do |config|
