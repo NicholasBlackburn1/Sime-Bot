@@ -15,33 +15,33 @@ def Minecraft(event)
     minecrafttextures = ret['textures.minecraft.net']
     
     if(minecraftsession == 'green')
-        minecraftsession = "**ACTIVE✔**"
+        minecraftsession = "`ONLINE ✔️`"
     else()
-        minecraftsession = "**ON FIRE**"
+        minecraftsession = "`OFFLINE ❌`"
     end
 
     if(minecraftaccounts == 'green')
-        minecraftaccounts = "**ACTIVE✔**"
+        minecraftaccounts = "`ONLINE ✔️`"
     else()
-        minecraftaccounts = "**ON FIRE**"
+        minecraftaccounts = "`OFFLINE ❌`"
     end
 
     if(minecraftauth == 'green')
-        minecraftauth = "**ACTIVE✔**"
+        minecraftauth = "`ONLINE ✔️`"
     else()
-        minecraftauth = "**ON FIRE**"
+        minecraftauth = "`OFFLINE ❌`"
     end
 
     if(minecrafttextures == 'green')
-        minecrafttextures = "**ACTIVE✔**"
+        minecrafttextures = "`ONLINE ✔️`"
     else()
-        minecrafttextures = "**ON FIRE**"
+        minecrafttextures = "`OFFLINE ❌`"
     end
     
-
-    event.respond("`session.minecraft.net`" + minecraftsession)
-    event.respond("`account.mojang.com`" + minecraftaccounts)
-    event.respond("`authserver.mojang.com`" + minecraftauth)
-    event.respond("`textures.minecraft.net`" + minecrafttextures)
+    event.respond('**MINECRAFT STATUS**')
+    event.respond("session.minecraft.net" + minecraftsession)
+    event.respond("account.mojang.com" + minecraftaccounts)
+    event.respond("authserver.mojang.com" + minecraftauth)
+    event.respond("textures.minecraft.net" + minecrafttextures)
   
 end 

@@ -38,7 +38,7 @@ bot.message(content: '@steam') do |event|
 end
 
 bot.message(content: '@xboxlive') do |event|
-    event <<"https://beta.support.xbox.com/xbox-live-status?xr=shellnav"
+   # Xboxlive(event)
 end
 
 bot.message(content: '@uplay') do |event|

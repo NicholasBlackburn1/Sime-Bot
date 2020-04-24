@@ -7,12 +7,14 @@ def Steam(event)
     online = data.success 
 
     if(online == TRUE)
-        status = "**ONLINE**"
+        status = "`ONLINE ✔️`"
     else()
-        status = "**ON FIRE**"
+        status = "`OFFLINE ❌`"
     end 
 
-    event.respond("`Is Steam Server Online `" + status )
+    event.respond("api.steampowered.com" + status )
+    event.respond("store.steampowered.com" + status )
+    event.respond("steampowered.com" + status )
 end
 
 def SteamConfig(config)
