@@ -13,9 +13,11 @@ require_relative 'comand/Help'
 require_relative 'comand/Atbot'
 prefix = "@"
 
+botkey = ENV['DISCORD_API_KEY']
+
 Logger.new(ENV['Starting Discord bot'])
 
-bot = Discordrb::Commands::CommandBot.new token: 'NzAyODc1NzMyOTkyNTg5ODU4.XqGkYA.V-aSFKeG-4tXODd_Ul93LJ6Um6c', prefix: prefix
+bot = Discordrb::Commands::CommandBot.new token: , prefix: prefix
 bot.run true
 # Steam api config 
 SteamWebApi.configure do |config|
