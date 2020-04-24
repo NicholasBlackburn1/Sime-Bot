@@ -36,11 +36,6 @@ end
 bot.message(content: '@steam') do |event|
    Steam(event)
 end
-
-bot.message(content: '@xboxlive') do |event|
-   # Xboxlive(event)
-end
-
 bot.message(content: '@uplay') do |event|
     
 end
@@ -49,10 +44,6 @@ bot.message(content: '@minecraft') do |event|
     Minecraft(event)
 end
 
-bot.message(content: '@rockstar') do |event|
-    
-    
-end
 
 
 bot.join()
