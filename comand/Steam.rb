@@ -1,19 +1,18 @@
 
 def Steam(event)
     playerkey = ENV["STEAM_USER_KEY"]
-    player_steam_id = playerkey
-
-    player = SteamWebApi::Player.new(player_steam_id)
+    
+    player = SteamWebApi::Player.new(playerkey)
     data = player.owned_games
     online = data.success 
 
     if(online == TRUE)
         status = "**ONLINE**"
     else()
-        status = "`ON FIRE`"
+        status = "**ON FIRE**"
     end 
 
-    event.respond("`Is Steam Api Online `" + status )
+    event.respond("`Is Steam Server Online `" + status )
 end
 
 def SteamConfig(config)
