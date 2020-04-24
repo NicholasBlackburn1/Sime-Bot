@@ -1,16 +1,23 @@
 """
 Main Discord Bot File Use to link the project to gether the project
 """
+require 'json'
 require 'discordrb'
 require 'mojang'
+require 'steam_web_api'
 
 prefix = "@"
-
+player_steam_id = 
+player2_steam_id = 
 
 Logger.new(ENV['Starting Discord bot'])
 
-bot = Discordrb::Commands::CommandBot.new token: '', prefix: prefix
+bot = Discordrb::Commands::CommandBot.new token: , prefix: prefix
 bot.run true
+# Steam api config 
+SteamWebApi.configure do |config|
+	config.api_key = 
+end
 
 # Mentiond bot unction
 bot.mention do |event|
@@ -22,12 +29,21 @@ bot.message(content: '@help') do |event|
     event << "`@steam` -> Shows Status of Steams Services"
     event << "`@xboxlive` -> Shows Status of Steams Services"
     event << "`@uplay` -> Shows Status of Uplays Services"
-    event << "`@minecraft` -> shows Status of the Minecraft Service's"
+    event << "`@minecraft` -> shows Status of the Minecraft Service's. 'Working? ✔`"
     event << "`@rockstar` -> Shows Status of the Rockstar Service's"
 end
 
 bot.message(content: '@steam') do |event|
-    
+    player = SteamWebApi::Player.new(player_steam_id)
+    data = player.owned_games
+    online = data.success 
+
+    if(online == TRUE)
+        status = "**ONLINE**"
+    else()
+        status = "`ON FIRE`"
+    end 
+    event.respond("`Is Steam Api Online `" + status )
 end
 
 bot.message(content: '@xboxlive') do |event|
@@ -55,25 +71,25 @@ bot.message(content: '@minecraft') do |event|
     minecrafttextures = ret['textures.minecraft.net']
     
     if(minecraftsession == 'green')
-        minecraftsession = "**ACTIVE**"
+        minecraftsession = "**ACTIVE✔**"
     else()
         minecraftsession = "**ON FIRE**"
     end
 
     if(minecraftaccounts == 'green')
-        minecraftaccounts = "**ACTIVE**"
+        minecraftaccounts = "**ACTIVE✔**"
     else()
         minecraftaccounts = "**ON FIRE**"
     end
 
     if(minecraftauth == 'green')
-        minecraftauth = "**ACTIVE**"
+        minecraftauth = "**ACTIVE✔**"
     else()
         minecraftauth = "**ON FIRE**"
     end
 
     if(minecrafttextures == 'green')
-        minecrafttextures = "**ACTIVE**"
+        minecrafttextures = "**ACTIVE✔**"
     else()
         minecrafttextures = "**ON FIRE**"
     end

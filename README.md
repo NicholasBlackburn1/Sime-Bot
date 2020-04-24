@@ -16,10 +16,10 @@
 
 ## Chat Commands 
 ******
-1. @help -> Shows The help menu for the bot 
-2. @xboxlive -> Shows Status of xbox live Service's 
-3. @steam -> Shows Status of Steams Services 
-4. @uplay -> Shows Status of Uplays Services
-5. @minecraft -> shows Status of the Minecraft Service's
-6. @rockstar -> Shows Status of the Rockstar Service's
+1. @help -> Shows The help menu for the bot ✔
+2. @xboxlive -> Shows Status of xbox live Service's ✖ 
+3. @steam -> Shows Status of Steams Services ✖ 
+4. @uplay -> Shows Status of Uplays Services ✖ 
+5. @minecraft -> shows Status of the Minecraft Service's ✔
+6. @rockstar -> Shows Status of the Rockstar Service's ✖ 
 
