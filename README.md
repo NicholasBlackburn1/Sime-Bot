@@ -9,13 +9,13 @@
 
 1. To check public game servers for outages / ping time
 
-2. Monitor Servers for how many active players there are online **Minecraft servers**
+2. Monitor Servers for how many active players there are online **Minecraft servers & More**
 
-3. Display Graphs of ino on server ping
+3. Display Graphs of into on server ping
 
 
 ## Chat Commands 
 ******
 1. @help -> Shows The help menu for the bot ✔
-3. @steam -> Shows Status of Steams Services ✔
-4. @minecraft -> shows Status of the Minecraft Service's ✔
+2. @steam -> Shows Status of Steams Services ✔
+3. @minecraft -> shows Status of the Minecraft Service's ✔
