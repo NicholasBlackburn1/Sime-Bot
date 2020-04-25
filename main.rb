@@ -5,14 +5,16 @@ require 'json'
 require 'discordrb'
 require 'mojang'
 require 'steam_web_api'
+require 'opus-ruby'
 require 'dotenv/load'
 
 require_relative 'comand/Minecraft'
 require_relative 'comand/Steam'
 require_relative 'comand/Help'
 require_relative 'comand/Atbot'
-prefix = "@"
+require_relative 'comand/Music'
 
+prefix = "@"
 botkey = ENV['DISCORD_API_KEY']
 
 Logger.new(ENV['Starting Discord bot'])
@@ -36,14 +38,14 @@ end
 bot.message(content: '@steam') do |event|
    Steam(event)
 end
-bot.message(content: '@uplay') do |event|
-    
-end
 
 bot.message(content: '@minecraft') do |event|
     Minecraft(event)
 end
 
+bot.message(content: '@play') do |event|
+    openVoice(event,bot)
+end
 
 
 bot.join()

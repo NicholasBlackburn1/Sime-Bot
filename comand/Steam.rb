@@ -11,7 +11,7 @@ def Steam(event)
     else()
         status = "`OFFLINE ❌`"
     end 
-
+    event.respond("**STEAM STATUS**")
     event.respond("api.steampowered.com" + status )
     event.respond("store.steampowered.com" + status )
     event.respond("steampowered.com" + status )
