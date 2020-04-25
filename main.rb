@@ -47,6 +47,21 @@ bot.message(content: '@play') do |event|
     openVoice(event,bot)
 end
 
+bot.message(content: '@playtest') do |event|
+    openTestVoice(event,bot)
+end
+
+bot.message(content: '@pause') do |event|
+    stopMusic(event,bot)
+end
+
+bot.message(content: '@loud') do |event|
+    superVolume(event,bot)
+end
+
+bot.message(content: '@resume') do |event|
+    musicResume(event,bot)
+end
 
 bot.join()
 
