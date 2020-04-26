@@ -4,6 +4,7 @@ Main Discord Bot File Use to link the project to gether the project
 require 'json'
 require 'discordrb'
 require 'mojang'
+require 'minestat'
 require 'steam_web_api'
 require 'opus-ruby'
 require 'dotenv/load'
@@ -42,6 +43,11 @@ end
 bot.message(content: '@minecraft') do |event|
     Minecraft(event)
 end
+
+bot.message(content: '@mcserverlist') do |event|
+    popServers(event)
+end
+
 
 bot.message(content: '@play') do |event|
     openVoice(event,bot)

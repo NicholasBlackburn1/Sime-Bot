@@ -17,7 +17,7 @@ end
 
 def openTestVoice(event,bot)
     session =  "`ONLINE ✔️`"
-    sessionoff = "`OFFLINE ❌`"
+    sessionoff = "`TO USE ❌`"
 
     channel = event.user.voice_channel
     # The `voice_connect` method does everything necessary for the bot to connect to a voice channel. Afterwards the bot
@@ -25,9 +25,10 @@ def openTestVoice(event,bot)
  
     if (channel != nil)
         event.respond("Bot Test Voice"+session)
+        event.respond("Test of bot mp3 voice encodeing" + session)
         playTestMusic(bot,channel,event)
     else()
-        event.respond("Bot Test Voice"+sessionoff)
+        event.respond("Connect to Voice Channle"+sessionoff)
     end
     
 end

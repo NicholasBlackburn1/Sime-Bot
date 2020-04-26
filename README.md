@@ -19,6 +19,11 @@
 1. @help -> Shows The help menu for the bot ✔
 2. @steam -> Shows Status of Steams Services ✔
 3. @minecraft -> shows Status of the Minecraft Service's ✔
+4. @mcserverlist -> Shows Current activity of popular Minecraft servers ✔
+
+
+## Music Commands 
+******
 4. @play -> Test's Voice Function and Plays music.
 5. @playtest -> Plays test music ✔
 6. @pause -> pauses Music ✔
