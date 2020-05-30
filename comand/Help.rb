@@ -1,3 +1,3 @@
 def Help(event)
-    event  << "@Sime-Bot to get help"
+    event  << "@Slime-Bot to get help"
 end
