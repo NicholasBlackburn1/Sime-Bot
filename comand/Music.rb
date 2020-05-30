@@ -35,7 +35,7 @@ end
 
 def playMusic(bot,channel,event)
     bot.voice_connect(channel)
-    event.voice.play_file('data/test.mp3')
+    event.voice.playio(open())
 
     if(event.voice.pause == true)
         event.respond("Music is paused To Play Type @resume")

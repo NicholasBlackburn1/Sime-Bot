@@ -69,6 +69,8 @@ bot.message(content: '@resume') do |event|
     musicResume(event,bot)
 end
 
+bot.message(content: '@')
+
 bot.join()
 
 

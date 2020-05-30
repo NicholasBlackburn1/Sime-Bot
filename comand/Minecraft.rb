@@ -86,10 +86,10 @@ def blackCraft(event)
     event.respond("**Hacker Craft SERVER**")
     online = "`ONLINE ✔️`"
     offline = "`OFFLINE ❌`"
-    ms = MineStat.new("minecraft.nicholasblackburn.space", 25565)
+    ms = MineStat.new("play.nicholasblackburn.space", 25565)
     
     if ms.online
-      event.respond("minecraft.nicholasblackburn.space"+online)
+      event.respond("play.nicholasblackburn.space"+online)
       event.respond("Server is running version #{ms.version} with #{ms.current_players} out of #{ms.max_players} players")
       event.respond "Latency: #{ms.latency}ms"
     else
