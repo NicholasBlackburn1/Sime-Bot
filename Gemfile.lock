@@ -1,7 +1,6 @@
 GIT
   remote: https://github.com/swarley/discordrb.git
-  revision: 5c04534a5aa07df17a3a34dd7f131b0ab089a480
-  branch: voice_websocket_update
+  revision: 6a1ec2723b3f53bee422b340cf2300a55792cea5
   specs:
     discordrb (3.3.0)
       discordrb-webhooks (~> 3.3.0)

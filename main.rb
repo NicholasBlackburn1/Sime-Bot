@@ -1,6 +1,7 @@
 """
 Main Discord Bot File Use to link the project to gether the project
 """
+
 require 'json'
 require 'discordrb'
 require 'mojang'
@@ -58,7 +59,7 @@ bot.message(content: '@playtest') do |event|
 end
 
 bot.message(content: '@pause') do |event|
-    stopMusic(event,bot)
+    pauseMusic(event,bot)
 end
 
 bot.message(content: '@loud') do |event|
@@ -69,7 +70,9 @@ bot.message(content: '@resume') do |event|
     musicResume(event,bot)
 end
 
-bot.message(content: '@')
+bot.message(content: '@stop') do |event|
+    stopMusic(event,bot)
+end
 
 bot.join()
 

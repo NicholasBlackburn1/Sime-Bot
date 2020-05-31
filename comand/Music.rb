@@ -34,8 +34,7 @@ def openTestVoice(event,bot)
 end
 
 def playMusic(bot,channel,event)
-    bot.voice_connect(channel)
-    event.voice.playio(open())
+    event.respond("This Feature is Not commplete")
 
     if(event.voice.pause == true)
         event.respond("Music is paused To Play Type @resume")
@@ -53,9 +52,10 @@ def playTestMusic(bot,channel,event)
     end
 end
 
-def stopMusic(event,bot)
-    event.voice.pause
+def pauseMusic(event,bot)
     event.respond("Music `PAUSED ✔️`")
+    event.voice.pause
+
 end
 
 def superVolume(event,bot)
@@ -67,4 +67,9 @@ end
 def musicResume(event, bot) 
     event.voice.continue
     event.respond("playing `Music! ✔️`")
+end
+
+def stopMusic(event,bot)
+    event.respond("VoiceBot `DISCONNECTED ✔️`")
+    event.voice.destroy
 end
