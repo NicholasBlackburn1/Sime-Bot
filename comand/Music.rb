@@ -34,12 +34,7 @@ def openTestVoice(event,bot)
 end
 
 def playMusic(bot,channel,event)
-    event.respond("This Feature is Not commplete")
-
-    if(event.voice.pause == true)
-        event.respond("Music is paused To Play Type @resume")
-    else()
-    end
+    playMoaing(bot,channel,event)
 end
 
 def playTestMusic(bot,channel,event)
@@ -72,4 +67,33 @@ end
 def stopMusic(event,bot)
     event.respond("VoiceBot `DISCONNECTED ✔️`")
     event.voice.destroy
+end
+
+def playMoaing(event,bot,channel)
+   
+    vid = Discordrb::Webhooks::EmbedThumbnail.new(url:"https://www.pornhub.com/view_video.php?viewkey=ph5d0eb77c1600a")
+
+    bot.voice_connect(channel)
+
+    event.voice.play_file('data/moan.mp3')
+    event.respond("`Hope you Have Fun With Pearl!`")
+    event.re spond("Here, Have Some **WHOLESOME FUN` With pearl!")
+    event.respond(vid)
+
+        event.respond("Pearl Universe"+session)
+        event.respond("Have Fun!" + session)
+        fun = True
+        playFun(bot,channel,event, fun)
+
+
+    
+end
+
+
+def playFun(bot,channel,event, fun)
+    bot.voice_connect(channel)
+    if (fun == true)
+        event.voice.play_file('data/fun.mp3')
+        event.voice.volume = 20
+    end
 end

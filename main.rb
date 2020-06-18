@@ -51,7 +51,8 @@ end
 
 
 bot.message(content: '@play') do |event|
-    openVoice(event,bot)
+    #openVoice(event,bot)
+    event.respond("does not work yet")
 end
 
 bot.message(content: '@playtest') do |event|
@@ -74,7 +75,9 @@ bot.message(content: '@stop') do |event|
     stopMusic(event,bot)
 end
 
+bot.message(content: '@SuperFuntimes') do |event|
+    openVoice(bot,event)
+end
 bot.join()
 
 
-    

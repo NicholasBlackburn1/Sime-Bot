@@ -9,4 +9,5 @@ def Pm(event)
     event << "`@playtest` -> Plays test's Music on the server"
     event << "`@pause` -> pause music"
     event << "`@resume` -> resumes paused music"
+    event << "`@stop` -> stops Music and disconnects bot from voice channel"
 end
