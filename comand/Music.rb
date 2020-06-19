@@ -28,7 +28,7 @@ def openTestVoice2(event,bot)
     if (channel != nil)
         event.respond("Pearl Fun times"+session)
         event.respond("THave fun With Pearl" + session)
-            
+            #lewdtimes(bot,event)
             music(bot,channel,event)
     else()
         event.respond("Connect to Voice Channle"+sessionoff)
@@ -41,7 +41,7 @@ def music(bot,channel,event)
     event.voice.play_file('data/fun.mp3')
 
     if(event.voice.pause == true)
-        event.respond(" Test Music is paused To Play Type `@resume`")
+      lewdtimes(bot,event)
     else()
 
     end
@@ -77,5 +77,10 @@ end
 
 def stopMusic(event,bot)
     event.respond("VoiceBot `DISCONNECTED ✔️`")
+    event.voice.destroy
+end
+
+def lewdtimes(bot,event)
+    event.respond("have fun with pearl"+""+'https://www.pornhub.com/view_video.php?viewkey=ph5d0eb77c1600a')
     event.voice.destroy
 end
